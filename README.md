@@ -32,6 +32,16 @@ The dashboard lets you search for what you’re looking for and if you click int
 
 
 
+## Design decisions
+- Allow the use of natural language for feature names.
+- Included a description for how the feature works.
+- Hide the further details until a user finds what they want. Then allow them to expand the panel and see more.
+- It’s all read only on the main page so Designers and Product peeps don’t have to worry about accidentally disabling something. (The two clicks to get into edit is intentional friction)
+- Only engineers can create new features. Product is only provided the ability to modify existing features.
+- The search can be improved but it adds quality of life to a world where there are hundreds of features.
+- I envision having something like tags that would let you filter by team. “I only want to see features that my team owns”.
+
+
 ## TODOS
 
 Add tags to features allowing you to filter them by team or other criteria.
