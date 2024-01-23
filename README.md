@@ -2,6 +2,10 @@
 
 
 
+<img width="1408" alt="Screenshot 2024-01-23 at 8 52 01 AM" src="https://github.com/zremboldt/RootExperiences/assets/19367659/bd40565e-33f2-4e9d-9216-de8338a40434">
+
+
+
 ## Steps to run the project
 
 Using Ruby version: 3.1.2
