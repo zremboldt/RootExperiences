@@ -1,0 +1,149 @@
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.form_top_row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.form_field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.fieldset {
+  display: flex;
+  gap: 16px;
+}
+
+.fieldset_indicator {
+  width: 4px;
+  border-radius: 100px;
+  background-color: var(--dark-20-input);
+  margin-top: 8px;
+}
+
+.form_field.switch_field {
+  flex: 0;
+}
+
+.switch_container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+input[type=text],
+input[type=number],
+textarea {
+  display: block;
+  padding: 14px;
+  background-color: var(--dark-20-input);
+  border: 1px solid var(--dark-30-border);
+  border-radius: var(--radius-elements);
+  color: var(--text-75);
+  font-family: inherit;
+}
+
+input[type=text]:focus,
+input[type=number]:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 var(--selection-outline-width) var(--primary-30);
+  border-color: var(--primary-100);
+  color: var(--text-100);
+  transition: 300ms var(--ease-out-quart);
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    display: none;
+}
+
+textarea {
+  resize: none;
+  min-height: 90px;
+}
+
+::placeholder {
+  color: var(--text-55);
+}
+
+.button_row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.button {
+  flex: 1;
+  display: block;
+  color: white;
+  padding: 10px 50px;
+  border-radius: var(--radius-elements);
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 300ms var(--ease-out-quart);
+  border: 1px solid var(--primary-100);
+}
+.button.primary {
+  background-color: var(--primary-100);
+}
+.button.secondary {
+  color: var(--primary-100);
+}
+.button.small {
+  padding: 6px 28px;
+}
+.button.flex_end {
+  align-self: flex-end;
+}
+.button:focus-visible {
+  outline: none;
+  border-color: var(--primary-100);
+  box-shadow: 0 0 0 var(--selection-outline-width) var(--primary-30);
+}
+.button:active {
+  transform: scale(0.98);
+}
+
+/* ************ */
+/* Search field */
+/* ************ */
+
+.search_form {
+  position: sticky;
+  top: 16px;
+  margin: 16px 0 4px;
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+  background-color: var(--dark-12-bg);
+  box-shadow: 0 -6px 14px 28px var(--dark-12-bg);
+}
+
+.search_field {
+  flex: 1;
+}
+
+.search_button {
+  flex: 0;
+  padding: 0;
+  min-width: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search_button svg {
+  fill: var(--text-100);
+}

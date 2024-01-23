@@ -1,0 +1,41 @@
+.root_caret {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 14px;
+  width: 30px;
+  height: 30px;
+}
+.root_caret::before, 
+.root_caret::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--dark-20-input);
+}
+.root_caret::before {
+  width: 100%;
+  height: 50%;
+}
+.root_caret::after {
+  width: 50%;
+  height: 100%;
+}
+
+.root_title_tag {
+  position: fixed;
+  bottom: -12px;
+  left: 8px;
+  transform: rotate(-90deg);
+  transform-origin: left top;
+  color: var(--dark-20-input);
+  font-family: 'IBM Plex Mono', monospace;
+  pointer-events: none;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 715px) {
+  .root_caret { display: none; }
+  .root_title_tag { display: none; }
+}

@@ -1,0 +1,97 @@
+*, *:before, *:after {
+  margin: 0;
+}
+
+:root {
+  /* Type scale */
+  --size-300: clamp(0.7rem, 0.66rem + 0.2vw, 0.8rem);
+  --size-400: clamp(0.88rem, 0.83rem + 0.24vw, 1rem);
+  --size-500: clamp(1.09rem, 1rem + 0.47vw, 1.33rem);
+  --size-600: clamp(1.37rem, 1.21rem + 0.8vw, 1.78rem);
+  --size-700: clamp(1.71rem, 1.45rem + 1.29vw, 2.37rem);
+  --size-800: clamp(2.14rem, 1.74rem + 1.99vw, 3.16rem);
+  --size-900: clamp(2.67rem, 2.07rem + 3vw, 4.21rem);
+  --size-1000: clamp(3.34rem, 2.45rem + 4.43vw, 5.61rem);
+  /* Colors */
+  --primary-hue: 222; /* 222 */
+  --primary-100: hsla(var(--primary-hue), 100%, 56%, 1); 
+  --primary-70: hsla(var(--primary-hue), 100%, 56%, 0.7); /* rare */
+  --primary-30: hsla(var(--primary-hue), 100%, 56%, 0.3); /* outer ring for focused elements */
+  --dark-30-border: hsla(var(--primary-hue), 15%, 32%, 1); /* input border */
+  --dark-20-input: hsla(var(--primary-hue), 15%, 21%, 1); /* input background */
+  --dark-18: hsla(var(--primary-hue), 15%, 18%, 1); /* active input background */
+  --dark-12-bg: hsla(var(--primary-hue), 11%, 12%, 1); /* main screen background */
+  --dark-10: hsla(var(--primary-hue), 11%, 10%, 1); /* element background */
+  --text-100: hsla(0, 0%, 100%, 1);               /* active input text */
+  --text-75: hsla(var(--primary-hue), 22%, 75%, 1); /* text on light */
+  --text-55: hsla(var(--primary-hue), 13%, 55%, 1); /* text on dark */
+  --led-hue: 214; /* 154 or 214 are nice */
+  --led-glow: hsla(var(--led-hue), 100%, 56%, 1);
+  /* Misc */
+  --ease-out-quart: cubic-bezier(0.165, 0.85, 0.45, 1);
+  --radius-elements: 8px;
+  --selection-outline-width: 4px;
+}
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 400;
+  padding: 20px;
+  background-color: var(--dark-12-bg);
+  line-height: 1.5;
+  display: flex;
+  justify-content: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection { background: var(--primary-70); }
+::-moz-selection { background: var(--primary-70); }
+
+h1 {
+  font-size: var(--size-900);
+  font-weight: 300;
+}
+
+h2 {
+  font-size: var(--size-800);
+  font-weight: 300;
+}
+
+h3 {
+  font-size: var(--size-700);
+  font-weight: 400;
+}
+
+h4 {
+  font-size: var(--size-600);
+  font-weight: 400;
+}
+
+h5 {
+  font-size: var(--size-500);
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, p, li, a, label {
+  color: var(--text-55);
+  user-select: none;
+}
+
+p, li, a, label, button, input, textarea, select {
+  font-size: var(--size-400);
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--dark-30-border);
+}
+
+.page_wrap {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

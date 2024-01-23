@@ -1,0 +1,63 @@
+<div class="page_wrap">
+  <h2>Update experience</h2>
+
+  <%= form_with(model: @feature) do |feature_field| %>
+    <div class="form_top_row">
+      <div class="form_field">
+        <%= feature_field.label("Name") %>
+        <%= feature_field.text_field(:name, :autocomplete => "off") %>
+      </div>
+
+      <% if @feature.enabled %>
+        <%= feature_field.fields_for(:enabled, @feature.enabled) do |enabled_field| %>
+          <div class="form_field switch_field">
+            <%= enabled_field.label("Enabled") %>
+
+            <div class="switch_container">
+              <label class="switch">
+                <%= enabled_field.check_box(:is_enabled) %>
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+
+    <div class="form_field">
+      <%= feature_field.label("Description") %>
+      <%= feature_field.text_area(:description) %>
+    </div>
+
+    <% if @feature.condition %>
+      <%= feature_field.fields_for(:condition, @feature.condition) do |condition_field| %>
+        <div class="form_field">
+          <%= condition_field.label(condition_field.object.name) %>
+          <%= condition_field.text_field(:conditions, :autocomplete => "off") %>
+        </div>
+      <% end %>
+    <% end %>
+
+    <% if @feature.buckets.present? %>
+      <div class="form_field">
+        <%= feature_field.label("Buckets") %>
+        <div class="fieldset">
+          <div class="fieldset_indicator"></div>
+          <div class="form_field">
+            <% @feature.buckets.each do |bucket| %>
+              <%= feature_field.fields_for(:buckets, bucket) do |bucket_field| %>
+                <%= bucket_field.label(bucket.name, bucket.name.upcase) %>
+                <%= bucket_field.number_field(:value, :autocomplete => "off", :step => 10, :min => 0, :max => 100) %>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+
+    <div class="button_row">
+      <%= link_to("Cancel", "/features", class: "button secondary") %>
+      <%= feature_field.submit("Save", class: "button primary") %>
+    </div>
+  <% end %>
+</div>
