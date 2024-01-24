@@ -17,10 +17,10 @@
   --primary-100: hsla(var(--primary-hue), 100%, 56%, 1); 
   --primary-70: hsla(var(--primary-hue), 100%, 56%, 0.7); /* rare */
   --primary-30: hsla(var(--primary-hue), 100%, 56%, 0.3); /* outer ring for focused elements */
-  --dark-30-border: hsla(var(--primary-hue), 15%, 32%, 1); /* input border */
-  --dark-20-input: hsla(var(--primary-hue), 15%, 21%, 1); /* input background */
+  --dark-30: hsla(var(--primary-hue), 15%, 32%, 1); /* input border */
+  --dark-20: hsla(var(--primary-hue), 15%, 21%, 1); /* input background */
   --dark-18: hsla(var(--primary-hue), 15%, 18%, 1); /* active input background */
-  --dark-12-bg: hsla(var(--primary-hue), 11%, 12%, 1); /* main screen background */
+  --dark-12: hsla(var(--primary-hue), 11%, 12%, 1); /* main screen background */
   --dark-10: hsla(var(--primary-hue), 11%, 10%, 1); /* element background */
   --text-100: hsla(0, 0%, 100%, 1);               /* active input text */
   --text-75: hsla(var(--primary-hue), 22%, 75%, 1); /* text on light */
@@ -37,7 +37,7 @@ body {
   font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 400;
   padding: 20px;
-  background-color: var(--dark-12-bg);
+  background-color: var(--dark-12);
   line-height: 1.5;
   display: flex;
   justify-content: center;
@@ -84,7 +84,7 @@ p, li, a, label, button, input, textarea, select {
 
 hr {
   border: 0;
-  border-top: 1px solid var(--dark-30-border);
+  border-top: 1px solid var(--dark-30);
 }
 
 .page_wrap {

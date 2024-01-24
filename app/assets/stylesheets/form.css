@@ -25,7 +25,7 @@ form {
 .fieldset_indicator {
   width: 4px;
   border-radius: 100px;
-  background-color: var(--dark-20-input);
+  background-color: var(--dark-20);
   margin-top: 8px;
 }
 
@@ -44,8 +44,8 @@ input[type=number],
 textarea {
   display: block;
   padding: 14px;
-  background-color: var(--dark-20-input);
-  border: 1px solid var(--dark-30-border);
+  background-color: var(--dark-20);
+  border: 1px solid var(--dark-30);
   border-radius: var(--radius-elements);
   color: var(--text-75);
   font-family: inherit;
@@ -127,8 +127,8 @@ textarea {
   display: flex;
   flex-direction: row;
   gap: 18px;
-  background-color: var(--dark-12-bg);
-  box-shadow: 0 -6px 14px 28px var(--dark-12-bg);
+  background-color: var(--dark-12);
+  box-shadow: 0 -6px 14px 28px var(--dark-12);
 }
 
 .search_field {

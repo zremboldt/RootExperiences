@@ -12,7 +12,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-color: var(--dark-20-input);
+  background-color: var(--dark-20);
 }
 .root_caret::before {
   width: 100%;
@@ -29,7 +29,7 @@
   left: 8px;
   transform: rotate(-90deg);
   transform-origin: left top;
-  color: var(--dark-20-input);
+  color: var(--dark-20);
   font-family: 'IBM Plex Mono', monospace;
   pointer-events: none;
   text-transform: uppercase;
